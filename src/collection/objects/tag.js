@@ -4,11 +4,12 @@ const Resource = require('./payment');
 const {
   get,
   refresh,
+  update,
 } = require('./_methods');
 
 class Tag extends Component {
   constructor(request, props) {
-    super(request, props, [get, refresh]);
+    super(request, props, [get, refresh, update]);
     this.apiPath = 'tags';
   }
 

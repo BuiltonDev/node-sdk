@@ -2,11 +2,13 @@ const Component = require('./_objects');
 const {
   get,
   refresh,
+  del,
+  update,
 } = require('./_methods');
 
 class Product extends Component {
   constructor(request, props) {
-    super(request, props, [get, refresh]);
+    super(request, props, [get, refresh, del, update]);
     this.apiPath = 'products';
   }
 

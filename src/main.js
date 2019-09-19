@@ -3,6 +3,7 @@ const Error = require('./utils/error');
 
 const AIModels = require('./collection/resources/aiModels');
 const Company = require('./collection/resources/company');
+const Events = require('./collection/resources/events');
 const Orders = require('./collection/resources/orders');
 const Payments = require('./collection/resources/payments');
 const PaymentMethods = require('./collection/resources/paymentMethods');
@@ -13,8 +14,7 @@ const Subscriptions = require('./collection/resources/subscriptions');
 const Tags = require('./collection/resources/tags');
 const Users = require('./collection/resources/users');
 const Images = require('./collection/resources/images');
-
-const Cart = require('./functionality/cart');
+const Webhooks = require('./collection/resources/webhooks');
 
 let instance;
 
@@ -43,6 +43,7 @@ class Builton {
     this.aiModels = new AIModels(this.request);
     this.company = new Company(this.request);
     this.orders = new Orders(this.request);
+    this.events = new Events(this.request);
     this.payments = new Payments(this.request);
     this.paymentMethods = new PaymentMethods(this.request);
     this.plans = new Plans(this.request);
@@ -52,7 +53,7 @@ class Builton {
     this.tags = new Tags(this.request);
     this.users = new Users(this.request);
     this.images = new Images(this.request);
-    this.cart = new Cart(this.request);
+    this.webhooks = new Webhooks(this.request);
 
     if (singleton) {
       instance = this;

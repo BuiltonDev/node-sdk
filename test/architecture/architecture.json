@@ -18,11 +18,11 @@
       "roles": {
         "admin": [
           "create",
-          "getAll"
+          "search"
         ],
         "user": [
+          "getAll",
           "getFromId",
-          "search",
           "set"
         ]
       }
@@ -53,19 +53,15 @@
   "Image": {
     "object": {
       "roles": {
-        "admin": [
-        ],
-        "user": [
-        ]
+        "admin": [],
+        "user": []
       }
     },
     "resource": {
       "roles": {
-        "admin": [
-          "create"
-        ],
+        "admin": [],
         "user": [
-
+          "create"
         ]
       }
     }
@@ -116,12 +112,12 @@
     "resource": {
       "roles": {
         "admin": [
+          "search"
         ],
         "user": [
           "create",
           "getAll",
           "getFromId",
-          "search",
           "set"
         ]
       }
@@ -130,8 +126,7 @@
   "PaymentMethod": {
     "object": {
       "roles": {
-        "admin": [
-        ],
+        "admin": [],
         "user": [
           "get",
           "refresh",
@@ -142,8 +137,7 @@
     },
     "resource": {
       "roles": {
-        "admin": [
-        ],
+        "admin": [],
         "user": [
           "create",
           "getFromId",
@@ -213,11 +207,10 @@
   "Resource": {
     "object": {
       "roles": {
-        "admin": [
-          "del",
-          "update"
-        ],
+        "admin": [],
         "user": [
+          "del",
+          "update",
           "get",
           "refresh",
           "getOrders"
@@ -226,12 +219,11 @@
     },
     "resource": {
       "roles": {
-        "admin": [
+        "admin": [],
+        "user": [
           "create",
           "createBulk",
-          "updateBulk"
-        ],
-        "user": [
+          "updateBulk",
           "search",
           "getFromId",
           "getAll",
@@ -244,15 +236,15 @@
     "object": {
       "roles": {
         "admin": [
-          "del",
-          "update"
+          "del"
         ],
         "user": [
           "get",
           "refresh",
           "getPayments",
           "start",
-          "stop"
+          "stop",
+          "update"
         ]
       }
     },
@@ -300,9 +292,7 @@
   "User": {
     "object": {
       "roles": {
-        "admin": [
-          "del"
-        ],
+        "admin": [],
         "user": [
           "get",
           "refresh",
@@ -311,18 +301,19 @@
           "getRating",
           "setRating",
           "updateAddresses",
-          "getSubscriptions"
+          "getSubscriptions",
+          "del"
         ]
       }
     },
     "resource": {
       "roles": {
         "admin": [
-          "getFromId",
           "getAll",
           "search"
         ],
         "user": [
+          "getFromId",
           "create",
           "authenticate",
           "setMe",
