@@ -7,7 +7,7 @@ const paymentsFile = require('../fetchmock/payments.json');
 const paymentConfirmedFile = require('../fetchmock/paymentConfirmed.json');
 
 const endpoint = 'https://example.com';
-const bearerToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+const bearerToken = 'SERVICE_ACCOUNT_KEY';
 const sa = new Builton({ apiKey: 'dummy', bearerToken, endpoint });
 
 describe('Payment related tests', () => {
