@@ -22,9 +22,9 @@ class Tags extends Components {
     return obj.getProducts(...params);
   }
 
-  getRessources(id, ...params) {
+  getResources(id, ...params) {
     const obj = new Tag(this.request, id);
-    return obj.getRessources(...params);
+    return obj.getResources(...params);
   }
 }
 

@@ -6,6 +6,7 @@ const {
   getAll,
   get,
   set,
+  update,
 } = require('./_methods')(Subscription);
 
 class Subscriptions extends Components {
