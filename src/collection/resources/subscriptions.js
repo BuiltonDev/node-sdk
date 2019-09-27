@@ -8,11 +8,12 @@ const {
   set,
   del,
   update,
+  search,
 } = require('./_methods')(Subscription);
 
 class Subscriptions extends Components {
   constructor(request) {
-    super([create, getFromId, getAll, get, set, del, update]);
+    super([create, getFromId, getAll, get, set, del, update, search]);
     this.request = request;
     this.apiPath = 'subscriptions';
     this.ResConstructor = Subscription;
