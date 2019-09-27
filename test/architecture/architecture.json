@@ -278,7 +278,8 @@
     "resource": {
       "roles": {
         "admin": [
-          "create"
+          "create",
+          "del"
         ],
         "user": [
           "search",
