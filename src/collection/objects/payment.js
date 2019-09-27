@@ -3,11 +3,12 @@ const {
   get,
   refresh,
   update,
+  del,
 } = require('./_methods');
 
 class Payment extends Component {
   constructor(request, props) {
-    super(request, props, [get, refresh, update]);
+    super(request, props, [get, refresh, update, del]);
     this.apiPath = 'payments';
   }
 
