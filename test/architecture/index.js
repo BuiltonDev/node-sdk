@@ -6,6 +6,8 @@ const AiModel = require('../../src/collection/objects/aiModel');
 const Events = require('../../src/collection/resources/events');
 const Event = require('../../src/collection/objects/event');
 
+const Company = require('../../src/collection/resources/company');
+
 const Images = require('../../src/collection/resources/images');
 const Image = require('../../src/collection/objects/image');
 
@@ -139,6 +141,20 @@ describe.only('Architectural tests', () => {
   });
   it('Should match Events resource and object', (done) => {
     checkMatchingModels(new Events(), new Event());
+    done();
+  });
+  it('Should check architecture file correspong for Company', (done) => {
+    const model = architectureFile.Company;
+    const resourceFunctions = model.resource.roles.admin.concat(model.resource.roles.user);
+    const company = new Company();
+    console.log(resourceFunctions);
+    console.log(getClassMethods(company).sort());
+    assert(areArraysEqual(
+      getClassMethods(company).sort(), resourceFunctions.sort(),
+    ));
+    resourceFunctions.forEach((fn) => {
+      assert(company[fn] !== undefined);
+    });
     done();
   });
   it('Should check architecture file correspong for Image', (done) => {
