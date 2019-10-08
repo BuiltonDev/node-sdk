@@ -123,7 +123,7 @@ const checkArchitectureMatchesJsonFile = (id, res, object) => {
   });
 };
 
-describe.only('Architectural tests', () => {
+describe('Architectural tests', () => {
   it('Should check architecture file correspong for AiModel', (done) => {
     checkArchitectureMatchesJsonFile('AiModel', new AiModels(), new AiModel());
     done();
@@ -144,8 +144,6 @@ describe.only('Architectural tests', () => {
     const model = architectureFile.Company;
     const resourceFunctions = model.resource.roles.admin.concat(model.resource.roles.user);
     const company = new Company();
-    console.log(resourceFunctions);
-    console.log(getClassMethods(company).sort());
     assert(areArraysEqual(
       getClassMethods(company).sort(), resourceFunctions.sort(),
     ));
