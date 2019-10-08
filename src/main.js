@@ -11,7 +11,6 @@ const Plans = require('./collection/resources/plans');
 const Products = require('./collection/resources/products');
 const Resources = require('./collection/resources/resources');
 const Subscriptions = require('./collection/resources/subscriptions');
-const Tags = require('./collection/resources/tags');
 const Users = require('./collection/resources/users');
 const Images = require('./collection/resources/images');
 const Webhooks = require('./collection/resources/webhooks');
@@ -50,7 +49,6 @@ class Builton {
     this.products = new Products(this.request);
     this.resources = new Resources(this.request);
     this.subscriptions = new Subscriptions(this.request);
-    this.tags = new Tags(this.request);
     this.users = new Users(this.request);
     this.images = new Images(this.request);
     this.webhooks = new Webhooks(this.request);
