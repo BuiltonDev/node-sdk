@@ -1,20 +1,18 @@
 {
-  "name": "@builton/core-sdk",
+  "name": "@builton/node-sdk",
   "version": "4.0.1",
-  "description": "Builton JavaScript SDK.",
+  "description": "Builton Node SDK.",
   "main": "src/main.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/ --recursive",
     "lint": "./node_modules/.bin/eslint .",
-    "webpack": "./node_modules/.bin/webpack",
-    "buildAuto": "nodemon --ignore 'dist/*' --ignore 'example/*' --exec npm run webpack",
-    "build": "npm i && ./node_modules/.bin/mocha test/ --recursive && ./node_modules/.bin/webpack && echo '------ESLINT------\n' && ./node_modules/.bin/eslint . && echo '------------------\n'",
+    "pre-release": "npm run test && npm run lint",
     "release": "release-it",
     "dry-release": "release-it --dry-run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BuiltonDev/javascript-sdk.git"
+    "url": "git+https://github.com/BuiltonDev/node-sdk.git"
   },
   "author": "Builton <hello@builton.dev> (https://builton.dev/)",
   "license": "MIT",
@@ -26,32 +24,21 @@
     "On-demand"
   ],
   "bugs": {
-    "url": "https://github.com/BuiltonDev/javascript-sdk/issues"
+    "url": "https://github.com/BuiltonDev/node-sdk/issues"
   },
-  "homepage": "https://github.com/BuiltonDev/javascript-sdk#readme",
+  "homepage": "https://github.com/BuiltonDev/node-sdk#readme",
   "devDependencies": {
-    "@babel/cli": "7.5.5",
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
-    "@babel/register": "7.5.5",
-    "babel-loader": "8.0.6",
-    "core-js": "3.2.1",
     "eslint": "6.1.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-import": "2.18.2",
     "mocha": "6.2.0",
     "nock": "10.0.6",
     "nodemon": "1.19.1",
-    "release-it": "12.3.6",
-    "uglifyjs-webpack-plugin": "2.2.0",
-    "webpack": "4.39.3",
-    "webpack-cli": "3.3.7"
+    "release-it": "12.3.6"
   },
   "dependencies": {
     "form-data": "^2.5.1",
     "jwt-decode": "^2.2.0",
-    "store2": "^2.9.0",
     "superagent": "^5.1.0"
-  },
-  "browser": "./dist/main.bundle.js"
+  }
 }
