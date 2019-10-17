@@ -1,11 +1,13 @@
 [![Travis](https://img.shields.io/travis/BuiltonDev/node-sdk/master.svg?style=flat-square)](https://travis-ci.org/BuiltonDev/node-sdk.svg?branch=master)
 [![David](https://img.shields.io/david/BuiltonDev/node-sdk.svg?style=flat-square)](https://david-dm.org/BuiltonDev/node-sdk)
-[![GitHub release](https://img.shields.io/github/release/BuiltonDev/node-sdk.svg?style=flat-square)](https://github.com/BuiltonDev/core-sdk/releases)
+[![GitHub release](https://img.shields.io/github/release/BuiltonDev/node-sdk.svg?style=flat-square)](https://github.com/BuiltonDev/node-sdk/releases)
 [![license](https://img.shields.io/github/license/BuiltonDev/node-sdk.svg?style=flat-square)](LICENSE.md)
 
 # Builton SDK
 
-[Builton](https://www.builton.dev) offers a platform as a service that digitizes core business functions and optimizes resource allocation with baked-in machine learning capabilities. This SDK gives you access to our platform's building blocks and will help you implement its API in a Javascript or browser environment.  Get instant access to modules like Payments, Messaging Tools, User Management and Authentication, Scheduling, Resource Allocation and more.
+[Builton](https://www.builton.dev) offers a platform as a service that digitizes core business functions and optimizes resource allocation with baked-in machine learning capabilities. This SDK gives you a machine-to-machine access to our platform's building blocks and will help you implement its API in a Javascript environment.  Get instant access to modules like Payments, Messaging Tools, User Management, Webhooks, Resource Allocation and more.
+
+If you are looking for a client SDK, take a look at our [Javascript SDK](https://github.com/BuiltonDev/javascript-sdk)
 
 ![Builton logo](https://res.cloudinary.com/dftspnwxo/image/upload/v1554131594/Builton_logo_positiv_wc3j7x.svg)
 
