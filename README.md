@@ -1,4 +1,3 @@
-[![Travis](https://img.shields.io/travis/BuiltonDev/node-sdk/master.svg?style=flat-square)](https://travis-ci.org/BuiltonDev/node-sdk.svg?branch=master)
 [![David](https://img.shields.io/david/BuiltonDev/node-sdk.svg?style=flat-square)](https://david-dm.org/BuiltonDev/node-sdk)
 [![GitHub release](https://img.shields.io/github/release/BuiltonDev/node-sdk.svg?style=flat-square)](https://github.com/BuiltonDev/node-sdk/releases)
 [![license](https://img.shields.io/github/license/BuiltonDev/node-sdk.svg?style=flat-square)](LICENSE.md)
@@ -42,16 +41,16 @@ The `bearerToken` is the service account key.
 
 Using a callback:
 ```js
-builton.orders.get({ urlParams: { size: 5 } }, function(err, orders) {
-  const firstOrder = orders[0];
+builton.orders.get({ size: 5 }, function(err, page) {
+  const firstOrder = page.current[0];
   firstOrder.update({ delivery_status: 'DONE' });
 });
 ```
 
 Using promises:
 ```js
-builton.orders.get({ urlParams: { size: 5 } }).then((orders) => {
-  const firstOrder = orders[0];
+builton.orders.get({ size: 5 }).then((page) => {
+  const firstOrder = page.current[0];
   firstOrder.update({ delivery_status: 'DONE' });
 });
 ```
@@ -59,8 +58,8 @@ builton.orders.get({ urlParams: { size: 5 } }).then((orders) => {
 Using async/await:
 ```js
 // This needs to be within in an `async` function
-const orders = await builton.orders.get({ urlParams: { size: 5 } });
-const firstOrder = orders[0];
+const page = await builton.orders.get({ size: 5 });
+const firstOrder = page.current[0];
 firstOrder.update({ delivery_status: 'DONE' });
 ```
 
