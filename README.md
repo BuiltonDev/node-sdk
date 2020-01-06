@@ -22,7 +22,7 @@ If you are looking for a client SDK, take a look at our [Javascript SDK](https:/
 From [npm](https://npmjs.org)
 
 ```sh
-npm install @builton.dev/node-sdk
+npm install @builton/node-sdk
 ```
 
 
