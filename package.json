@@ -31,9 +31,9 @@
     "eslint": "6.1.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-import": "2.18.2",
-    "mocha": "6.2.0",
+    "mocha": "10.2.0",
     "nock": "10.0.6",
-    "release-it": "12.3.6"
+    "release-it": "15.6.0"
   },
   "dependencies": {
     "jwt-decode": "^2.2.0",
